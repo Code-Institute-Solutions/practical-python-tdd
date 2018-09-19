@@ -1,3 +1,13 @@
+"""
+Solution to the challenge in the `Test Before` unit found in the `Test Driven
+Development with Python lesson`
+
+NOTE: The solution found in this file is one of the many potential solutions
+that can be used to achieve the end result expected by the challenge in the
+lesson.
+"""
+
+
 def is_even(number):
     """
     A small helper function that simply checks to see if the number 
@@ -29,9 +39,11 @@ def even_number_of_evens(numbers):
         - if the list contains no items, return `False`
     """
 
-    # Check the length of the list. If the length of the list is greater than
-    # 0, start the iteration process, else return `False`
-    if len(numbers) > 0:
+    # Check to see if the list is empty. If it is, return `False`, else start
+    # the iterative process
+    if numbers == []:
+        return False
+    else:
         # Set a `number_of_evens` variable that will be incremented each time
         # an even number is found
         number_of_evens = 0
@@ -49,8 +61,6 @@ def even_number_of_evens(numbers):
             return True
         else:
             return False
-    else:
-        return False
 
 # Our set of test cases
 assert even_number_of_evens([]) == False, "No numbers"
