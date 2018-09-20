@@ -1,5 +1,5 @@
 """
-Solution to the second challenge in the `Build Your Own Test Framework` unit 
+Solution to the third challenge in the `Build Your Own Test Framework` unit 
 found in the `Test Driven Development with Python lesson`
 
 NOTE: The solution found in this file is one of the many potential solutions
@@ -16,7 +16,8 @@ def test_are_equal(actual, expected):
     `actual` is the actual value produced
     `expected` is the value that was supposed to be produced
     """
-    assert expected == actual, "Expected {0}, got {1}".format(expected, actual)
+    assert expected == actual, "Expected {0}, got {1}".format(
+        expected, actual)
 
 
 def test_not_equal(a, b):
@@ -38,7 +39,8 @@ def test_is_in(collection, item):
     `collection` is the collection to be tested
     `item` is the item that is being searched for
     """
-    assert item in collection, "{0} does not contain {1}".format(collection, item)
+    assert item in collection, "{0} does not contain {1}".format(
+        collection, item)
 
 
 def test_not_in(collection, item):
@@ -49,7 +51,8 @@ def test_not_in(collection, item):
     `collection` is the collection in question
     `item` is the thing that we want to check for
     """
-    assert item not in collection, "{0} is not in {1}".format(item, collection)
+    assert item not in collection, "{0} is not in {1}".format(
+        item, collection)
 
 
 def test_between(upper_limit, lower_limit, actual):
@@ -57,7 +60,7 @@ def test_between(upper_limit, lower_limit, actual):
     Check to ensure that a number is between two other numbers. Raises
     AssertionError if the number is not between the other two numbers
     """
-    assert lower_limit <= actual <= upper_limit, "{0} is between {1} and {2}".format(actual, lower_limit, upper_limit)
+    assert lower_limit <= actual <= upper_limit, "{0} is not between {1} and {2}".format(actual, lower_limit, upper_limit)
 
 
 # Test to fail the `test_are_equal` function
@@ -73,4 +76,4 @@ def test_between(upper_limit, lower_limit, actual):
 # test_not_in([1], 1)
 
 # Test to fail the `test_between` function
-# test_between(10, 1, 200)
+test_between(10, 1, 200)
