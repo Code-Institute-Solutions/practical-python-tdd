@@ -57,7 +57,7 @@ test_are_equal(get_change(7), [5, 2])
 test_are_equal(get_change(9), [5, 2, 2])
 test_are_equal(get_change(35, usd_coins), [25, 10])
 test_are_equal(get_change(5, {2: 1, 1: 4}), [2, 1, 1, 1])
-test_exception_was_raised(get_change (5, {2: 1, 1: 2}),
+test_exception_was_raised(get_change, (5, {2: 1, 1: 2}),
     "Insufficient coins to give change.")
 
 print("All tests pass!")
