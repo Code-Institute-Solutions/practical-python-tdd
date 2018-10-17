@@ -14,15 +14,9 @@ def get_change(amount, coins=eur_coins):
 
     Returns a list of coin values
     """
-    if amount == 0:
-        return []
-    
-    if amount in coins:
-        return [amount]
-    
     change = []
     for coin in coins:
-        if coin <= amount:
+        while coin <= amount:
             amount -= coin
             change.append(coin)
 
