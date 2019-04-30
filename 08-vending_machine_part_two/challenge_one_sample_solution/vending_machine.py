@@ -31,11 +31,11 @@ def get_change(amount, coins=eur_coins):
     # lowest by default, so we use `reverse=True` to start with the highest
     # denomination. The `while` ends when the domination quantity reaches 0.
     # An exception is thrown if there are insufficient coins to give change.
-    for demonination in sorted(coins.keys(), reverse=True):
-        while demonination <= amount and coins[denomination] > 0:
-            amount -= demonination
+    for denomination in sorted(coins.keys(), reverse=True):
+        while denomination <= amount and coins[denomination] > 0:
+            amount -= denomination
             coins[denomination] -= 1
-            change.append(demonination)
+            change.append(denomination)
     
     if amount != 0:
         raise Exception("Insufficient coins to give change.")
