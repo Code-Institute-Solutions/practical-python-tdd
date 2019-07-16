@@ -1,5 +1,5 @@
 """
-Solution to the third challenge in the `Build Your Own Test Framework` unit 
+Solution to the third challenge in the `Build Your Own Test Framework` unit
 found in the `Test Driven Development with Python lesson`
 
 NOTE: The solution found in this file is one of the many potential solutions
@@ -28,7 +28,7 @@ def test_not_equal(a, b):
     `a` is the actual value produced
     `b` is the value that was supposed to be produced
     """
-    assert a != b, "Did not expect {0} but got {1}".format(a, b)
+    assert a != b, "{0} is equal to {1}".format(a, b)
 
 
 def test_is_in(collection, item):
@@ -51,7 +51,7 @@ def test_not_in(collection, item):
     `collection` is the collection in question
     `item` is the thing that we want to check for
     """
-    assert item not in collection, "{0} is not in {1}".format(
+    assert item not in collection, "{0} is in {1}".format(
         item, collection)
 
 

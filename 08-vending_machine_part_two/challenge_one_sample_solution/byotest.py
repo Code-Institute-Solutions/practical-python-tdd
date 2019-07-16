@@ -18,7 +18,7 @@ def test_not_equal(a, b):
     `a` is the actual value produced
     `b` is the value that was supposed to be produced
     """
-    assert a != b, "Did not expect {0} but got {1}".format(a, b)
+    assert a != b, "{0} is equal to {1}".format(a, b)
 
 
 def test_is_in(collection, item):
@@ -41,7 +41,7 @@ def test_not_in(collection, item):
     `collection` is the collection in question
     `item` is the thing that we want to check for
     """
-    assert item not in collection, "{0} is not in {1}".format(
+    assert item not in collection, "{0} is in {1}".format(
         item, collection)
 
 
@@ -67,7 +67,7 @@ def test_exception_was_raised(func, args, message):
     """
     try:
         # Call the function and unpack the `args` tuple by using `*`. This
-        # will unpack each of the items from the `args` tuple to pass 
+        # will unpack each of the items from the `args` tuple to pass
         # them into the function as arguments
         func(*args)
 
@@ -81,5 +81,5 @@ def test_exception_was_raised(func, args, message):
         # The message that was thrown will be stored in the exception
         # instance as the first item in the list of `args`. This will allow us
         # to check to see if the message that was thrown is the same as the
-        # message that the developer was expecting 
+        # message that the developer was expecting
         assert e.args[0] == message, "The message that was provided did not match the message thrown"
