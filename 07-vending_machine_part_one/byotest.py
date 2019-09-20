@@ -13,12 +13,12 @@ def test_are_equal(actual, expected):
 def test_not_equal(a, b):
     """
     Test that two values are not equal. Raises AssertionError if both values
-    are not equal.
+    are in fact equal.
 
-    `a` is the actual value produced
-    `b` is the value that was supposed to be produced
+    `a` is the first value
+    `b` is the second value
     """
-    assert a != b, "Did not expect {0} but got {1}".format(a, b)
+    assert a != b, "{0} is equal to {1}".format(a, b)
 
 
 def test_is_in(collection, item):
